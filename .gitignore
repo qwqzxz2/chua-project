@@ -1,0 +1,50 @@
+# Build
+Build/
+build/
+*.o
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.su
+
+# IDE
+.cproject
+.project
+.mxproject
+.settings/
+*.launch
+*.uvguix.*
+*.uvoptx
+*.uvprojx
+*.ewd
+*.ewp
+*.eww
+*.scvd
+Debug/
+Release/
+
+# IDE - CLion/CMake
+cmake-build-*/
+.idea/
+*.iml
+
+# IDE - VSCode
+.vscode/
+.vscode/settings.json
+
+# Toolchain
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# SD Card image (local testing)
+sdcard.img
+
+# OS files
+.DS_Store
+Thumbs.db
