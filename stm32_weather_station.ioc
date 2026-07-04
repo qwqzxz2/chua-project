@@ -1,0 +1,81 @@
+#STM32CubeMX project file for STM32 Smart Environmental Monitoring Station
+#Open this file with STM32CubeMX 6.8+ to regenerate code.
+#
+#Target: STM32F407VGTx
+#Package: LQFP100
+#
+#Peripheral Configuration:
+#
+#RCC:
+#  HSE: Crystal/Ceramic Resonator
+#  LSE: Disable
+#  Clock: HSE 8MHz → PLL → 168MHz SYSCLK
+#  APB1: 42MHz, APB2: 84MHz
+#
+#GPIO:
+#  PA0: ADC1_IN0 (MQ-135)
+#  PA1: ADC1_IN1 (LDR)
+#  PA2: USART2_TX (ESP8266)
+#  PA3: USART2_RX (ESP8266)
+#  PA4: SPI1_NSS (SD Card CS)
+#  PA5: SPI1_SCK (SD Card)
+#  PA6: SPI1_MISO (SD Card)
+#  PA7: SPI1_MOSI (SD Card)
+#  PA9: USART1_TX (Debug)
+#  PA10: USART1_RX (Debug)
+#  PB0: GPIO_Output (DHT22 Data)
+#  PB1: TIM3_CH4 (Buzzer PWM)
+#  PB6: I2C1_SCL (BMP280 + SSD1306)
+#  PB7: I2C1_SDA (BMP280 + SSD1306)
+#  PC0: GPIO_Input (SD Card Detect)
+#  PC1: GPIO_Output (ESP8266 RST)
+#  PC2: GPIO_Output (ESP8266 GPIO0)
+#  PE0: TIM4_CH1 (RGB LED R)
+#  PE1: TIM4_CH2 (RGB LED G)
+#  PE2: TIM4_CH3 (RGB LED B)
+#
+#I2C1:
+#  Mode: I2C
+#  Speed: Fast Mode (400kHz)
+#
+#USART1:
+#  Mode: Asynchronous
+#  Baud: 115200
+#  Word: 8 bits
+#  DMA TX: DMA2 Stream7 Channel4
+#
+#USART2:
+#  Mode: Asynchronous
+#  Baud: 115200
+#  Word: 8 bits
+#  DMA TX: DMA2 Stream2 Channel4
+#
+#SPI1:
+#  Mode: Full-Duplex Master
+#  Frame: 8 bits
+#  Baud: 21MHz (SPI_BAUDRATEPRESCALER_8)
+#  CPOL: Low, CPHA: 1 Edge
+#
+#ADC1:
+#  IN0: MQ-135
+#  IN1: LDR
+#  Resolution: 12 bits
+#  Scan: Enabled
+#  Continuous: Enabled
+#
+#TIM3:
+#  CH4: PWM Generation
+#  Prescaler: 168-1
+#  Period: 1000-1 (1kHz)
+#
+#TIM4:
+#  CH1,2,3: PWM Generation
+#  Prescaler: 168-1
+#  Period: 1000-1 (1kHz)
+#
+#FreeRTOS:
+#  Mode: CMSIS_V2 (or compatible)
+#  Tasks: 6 tasks as defined in FreeRTOSConfig.h
+#
+#FATFS:
+#  Mode: SD Card (SPI)
